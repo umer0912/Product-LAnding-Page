@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <style type="text/css">
+    body{
+      padding: 0%;
+      margin: 0%;
+      font-family: poppins;
+    }
+    #div1 {
+      width: 33%;
+      height: 100vh;
+      background-color: pink;
+      left: 0%;
+      position: fixed;
+    }
+    #div2 {
+      width: 33%;
+      height: 100vh;
+      background-color: pink;
+      left: 33%;
+      position: fixed;
+    }
+    #div3 {
+      width: 33%;
+      height: 100vh;
+      background-color: pink;
+      left: 66%;
+      position: fixed;
+    }
+   .nav {
+    position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+ .logoname{
+  padding-left: 2rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+ }
+ .fa-bars{
+  padding-left: 2rem;
+   font-weight: bold;
+   color: white;
+ }
+ .fa-search{
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+   margin-right: 2rem;
+ }
+ .fa-shopping-bag{
+ background-color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+ }   
+ .product{
+  position: fixed;
+   top: 30%;
+   left: 20%;
+ }
+ .product-text{
+  position: fixed;
+  font-size: 200px;
+  left: 13%;
+  bottom: 5%;
+  color: yellow;
+ }
+ .slogan{
+  position: fixed;
+  left: 33%;
+  top: 20%;
+ }
+ .btn{
+  position: fixed;
+  bottom: 20%;
+  background-color: yellow;
+  border-radius:8%;
+  padding: 1%;
+  border: none;
+  left: 43%;
+ }
+ .sidebar{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-left: 3%;
+ }
+ .fa-brands{
+  margin: 2vh;
+  color: white;
+  font-size: 20px;
+ }
+ .shoe{
+
+  position: fixed;
+  bottom: 5%;
+  right: 10%;
+ }
+ .navi{
+  position: fixed;
+  bottom: 8%;
+  right: 14%;
+ }
+ .fa-arrow-left{
+  margin-right: 1rem;
+  background-color: white;
+  padding: 0.5rem;
+  opacity: 0.5;
+  border-radius: 2%;
+ }
+ .fa-arrow-right{
+    background-color: white;
+  padding: 0.5rem;
+  opacity: 0.5;
+  border-radius: 2%;
+ }
+ .size{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  bottom: 8%;
+  color: white;
+  margin-left: 3rem;
+ }
+ .number{
+  border: 2px solid white;
+  border-radius: 70%;
+    
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-right: 1rem;
+ }
+  </style>
+</head>
+<body>
+  <div id="div1"></div>
+  <div id="div2"></div>
+  <div id="div3"></div>
+  <div class="nav">
+      <div class="logo"><p class="logoname">adidas</p><i class="fa fa-bars fa-lg"></i></div>
+      <div class="side"><i class="fa fa-search"></i> <i class="fa fa-shopping-bag"></i> </div>
+     </div>
+     <div class="sidebar">
+       <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+         <i class="fa-brands fa-linkedin"></i>
+     </div>
+     <div class="product-text"><p >adidas.</p></div>
+     <div class="product"><img src="hero.png" height="250"></div>
+     <div class="slogan"> T H E &ensp; P U R E &ensp; C O M F O R T &ensp; I S &ensp; H E R E !</div>
+     <div ><button class="btn">R E S E R V E &ensp;N O W</button></div>
+     <div class="shoe"><img src="white-shoe.png" height="200"></div>
+     <div class="navi"> <i class="fa fa-arrow-left"></i><i class="fa fa-arrow-right"></i></div>
+     <div class="size"> <span class="number">7</span><span class="number">8</span><span class="number">9</span></div>
+     
+
+  <script>
+    gsap.from("#div1", {
+      y: '100%',
+      delay: .2,
+      duration: 1,
+        ease: 'Expo.easeInOut',
+    });
+    gsap.from("#div2", {
+      y: '100%',
+      delay: .4,
+      duration: 1,
+      ease: 'Expo.easeInOut',
+    });
+    gsap.from("#div3", {
+      y: '100%',
+      delay: .6,
+      duration: 1,
+       ease: 'Expo.easeInOut',
+    });
+    gsap.from(".logo",{
+      y:-100,
+      opacity:0,
+      delay: 1,
+      duration:0.5,
+      ease:'bounce'
+    })
+     gsap.from(".side",{
+      y:-100,
+      opacity:0,
+      delay: 1,
+      duration:0.5,
+      ease:'bounce'
+    })
+      gsap.from(".sidebar",{
+      x:-100,
+      opacity:0,
+      delay: 1.5,
+      duration:1,
+      ease:'easeIn'
+    })
+      gsap.from(".size",{
+      x:-100,
+      opacity:0,
+      delay: 1.5,
+      duration:1,
+      ease:'easeIn'
+    })
+        gsap.from(".shoe",{
+      x:100,
+      opacity:0,
+      delay: 1.5,
+      duration:1,
+      ease:'easeIn'
+    })
+        gsap.from(".navi",{
+      x:-10,
+      opacity:0,
+      delay: 1.5,
+      duration:0.5,
+      ease:'easeIn'
+    })
+     gsap.from(".product-text",{
+      y:50,
+      opacity:0,
+      delay:1,
+      duration:1.5,
+      ease:'slow mo'
+     })
+      gsap.from(".product",{
+      y:-1500,
+      opacity:0,
+      delay:2,
+      duration:1,
+      ease:'easeIn'
+     })
+      gsap.from(".slogan",{
+      y:-100,
+      opacity:0,
+      delay:3,
+      duration:1,
+      ease:'easeIn'
+     })
+        gsap.from(".btn",{
+      y:100,
+      opacity:0,
+      delay:4,
+      duration:1,
+      ease:'easeIn'
+     })
+  </script>
+</body>
+</html>
